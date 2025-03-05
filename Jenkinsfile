@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-            image "cypress/browsers" // Use the Cypress browser image
-            args "--entrypoint=''"   // Override entrypoint to allow custom commands
+            image "cypress/browsers" 
         }
     }
     stages {
