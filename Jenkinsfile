@@ -13,8 +13,16 @@ pipeline {
         }
         stage('Test cas 1') {
             steps {
-                sh 'npx cypress run --spec "cypress/e2e/affichageDesProduits.cy.js"'
+                sh 'npx cypress run"'
             }
         }
     }
+
+post{
+        always{
+            archiveArtifacts artifacts: 'cypress/reports/*/.*', fingerprint: true
+        }
+    }
+
 }
+
