@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 import loginPage from "../pages/login.page";
-import productsPage from "../pages/product.page"; // Assurez-vous que le chemin est correct
+import productsPage from "../pages/product.page"; 
 
 describe("Test affichage des produits", () => {
     
