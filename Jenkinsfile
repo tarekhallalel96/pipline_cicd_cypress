@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Test cas 1') {
             steps {
-                sh 'npx cypress run"'
+                sh 'npx cypress run'
             }
         }
     }
 
-post{
+    post{
         always{
             archiveArtifacts artifacts: 'cypress/reports/*/.*', fingerprint: true
         }
