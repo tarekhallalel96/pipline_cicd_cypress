@@ -3,7 +3,7 @@
 import loginPage from "../pages/login.page";
 import productsPage from "../pages/product.page"; 
 
-describe("Test affichage des produits", {tags : "tc001" }, () => {
+describe("Test affichage des produits", {tags: '@regression1'}, () => {
     
 
     context("Test affichage des produits", () => {

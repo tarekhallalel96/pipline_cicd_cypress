@@ -1,6 +1,6 @@
 import loginPage from "../pages/login.page"
 
-describe('login scenario',{tags : "tc007" },  () => {
+describe('login scenario',{tags: '@regression6'},  () => {
     it('correct user and correct pass', () => {
       cy.visit('https://www.saucedemo.com/')
       loginPage.login("standard_user", "secret_sauce")

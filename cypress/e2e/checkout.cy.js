@@ -7,7 +7,7 @@ import checkoutinformationpagePage from "../pages/checkoutinformationpage.page"
 import CheckoutOvervieuwPage from "../pages/CheckoutOvervieuw.page"
 
 
-describe("checkout",{tags : "tc003" },  () => {
+describe("checkout",{tags: '@regression3'},  () => {
 
     it("checkout", () => {
         cy.visit('https://www.saucedemo.com/')

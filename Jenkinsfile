@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test cas 1') {
             steps {
-                sh "npx cypress run --env grep=${params.CYPRESS_TAG}"
+                sh "npx cypress run --env grep=@tc001"
             }
         }
     }

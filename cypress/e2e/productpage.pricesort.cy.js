@@ -3,7 +3,7 @@
 import loginPage from "../pages/login.page"
 import ProductsPage from "../pages/product.page"
 
-describe('Le tri des produits : Prix', {tags : "tc008" },  () => {
+describe('Le tri des produits : Prix', {tags: '@regression7'},  () => {
     
     beforeEach(() => {
     cy.visit('https://www.saucedemo.com/')
