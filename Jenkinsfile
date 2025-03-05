@@ -20,7 +20,7 @@ pipeline {
 
     post{
         always{
-            archiveArtifacts artifacts: 'cypress/reports/*/.*', fingerprint: true
+            archiveArtifacts artifacts: 'cypress/reports/**/*.*', fingerprint: true
         }
     }
 
