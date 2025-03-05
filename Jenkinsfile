@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image "cypress/browsers" 
-            args "--entrypoint=''"
+            image 'cypress/browsers' 
+            args '--entrypoint=""'
         }
     }
     stages {
@@ -11,13 +11,10 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test cas 1 ') {
+        stage('Test cas 1') {
             steps {
                 sh 'npx cypress run --spec "cypress/e2e/affichageDesProduits.cy.js"'
             }
         }
-
-        }
     }
-
-
+}
