@@ -5,6 +5,9 @@ pipeline {
             args '--entrypoint=""'
         }
     }
+    parameters {
+        string(name: 'CYPRESS_TAG', defaultValue: 'tc001', description: 'Tag à utiliser pour exécuter les tests Cypress')
+    }
     stages {
         stage('Install Dependencies') {
             steps {
@@ -13,7 +16,7 @@ pipeline {
         }
         stage('Test cas 1') {
             steps {
-                sh 'npx cypress run'
+                sh "npx cypress run --env grep=${params.CYPRESS_TAG}"
             }
         }
     }
