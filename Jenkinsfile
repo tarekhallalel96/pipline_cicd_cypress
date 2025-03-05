@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image "cypress/browsers" 
+            args "--entrypoint=''"
         }
     }
     stages {
@@ -18,9 +19,5 @@ pipeline {
 
         }
     }
-    post {
-        always {
-            archiveArtifacts allowEmptyArchive: true, artifacts: 'cypress/videos/**/*, cypress/screenshots/**/*'
-        }
-    }
+
 
